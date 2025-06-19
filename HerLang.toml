@@ -1,0 +1,84 @@
+[project]
+name = "HerLang"
+version = "0.1.0"
+description = "A modern, gentle programming language designed for everyone"
+authors = ["HerLang Community <hello@herlang.dev>"]
+license = "MIT"
+homepage = "https://herlang.dev"
+repository = "https://github.com/herlang/herlang"
+keywords = ["programming", "language", "gentle", "modern", "inclusive"]
+
+[build]
+# 编译器设置
+compiler = "herlang"
+target = "native"
+optimization = "release"
+output_dir = "build"
+
+# 支持的目标架构
+[build.targets]
+x86_64-linux = { enabled = true }
+x86_64-windows = { enabled = true }
+x86_64-macos = { enabled = true }
+aarch64-linux = { enabled = true }
+riscv64-linux = { enabled = true, experimental = true }
+
+[dependencies]
+# 标准库总是可用
+std = { version = "1.0", builtin = true }
+
+# 可选的扩展库
+[dependencies.optional]
+ui = { version = "0.3", description = "声明式 UI 框架" }
+async = { version = "0.5", description = "异步编程支持" }
+network = { version = "0.4", description = "网络编程" }
+data = { version = "0.6", description = "数据处理与分析" }
+
+# 多语言互操作
+[interop]
+julia = { enabled = false, version = "1.8+" }
+elixir = { enabled = false, version = "1.14+" }
+raku = { enabled = false, version = "2022.12+" }
+python = { enabled = false, version = "3.10+" }
+rust = { enabled = false, version = "1.70+" }
+
+# 并发配置
+[concurrency]
+model = "actor"                 # actor, csp, async
+max_threads = "auto"            # auto, number
+scheduler = "gentle"            # gentle, performance
+memory_model = "shared-nothing"
+
+# 包管理配置
+[package]
+registry = "distributed"         # distributed, central
+naming = "descriptive"           # descriptive, short
+conflict_resolution = "semantic" # semantic, manual, latest
+
+# 开发体验
+[dev]
+hot_reload = true
+friendly_errors = true
+suggestion_engine = true
+inclusive_language_check = true
+
+# UI 开发 (可选)
+[ui]
+framework = "gentle-ui"
+responsive = true
+accessibility = true
+themes = ["light", "dark", "high-contrast", "gentle-pastels"]
+
+# 部署配置
+[deploy]
+containers = true
+serverless = true
+static_sites = true
+mobile_apps = true
+
+# 社区与支持
+[community]
+code_of_conduct = "https://herlang.dev/conduct"
+mentorship = true
+safe_spaces = true
+learning_resources = "https://learn.herlang.dev"

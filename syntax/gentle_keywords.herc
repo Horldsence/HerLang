@@ -1,0 +1,238 @@
+// gentle_keywords.herc - HerLang 温柔语法示例
+// 展示现代化女性友好编程语言的温柔表达方式
+
+// === 基础函数定义 ===
+gentle_function greet_with_love(name):
+    say "💖 你好，亲爱的 " + name + "！"
+    whisper "愿你今天充满阳光"
+end
+
+// === 条件判断 - 温柔的方式 ===
+gentle_function check_mood(feeling):
+    gently_if feeling == "happy":
+        say "🌸 太好了！继续保持这份快乐"
+    perhaps feeling == "sad":
+        say "🤗 给你一个温暖的拥抱"
+        suggest "要不要听听音乐或者散散步？"
+    otherwise:
+        say "💝 无论怎样，你都很棒"
+    end
+end
+
+// === 循环 - 优雅的迭代 ===
+gentle_function count_blessings():
+    blessings = ["健康", "友谊", "学习", "成长", "爱"]
+
+    gently_for each blessing in blessings:
+        say "🙏 感恩拥有：" + blessing
+        pause_and_reflect 100ms
+    end
+
+    say "✨ 生活中有这么多美好"
+end
+
+// === 并发编程 - 协作式多任务 ===
+gentle_function collaborative_work():
+    // 创建温柔的协程
+    spawn_gently task1():
+        repeat 3 times:
+            say "🌺 任务1正在优雅地工作..."
+            yield_kindly 500ms
+        end
+    end
+
+    spawn_gently task2():
+        repeat 3 times:
+            say "🦋 任务2正在静静地运行..."
+            yield_kindly 300ms
+        end
+    end
+
+    // 等待所有任务完成
+    await_all_with_patience
+    say "🎉 所有任务都完成了，团队合作真棒！"
+end
+
+// === 错误处理 - 温柔的异常处理 ===
+gentle_function handle_with_care():
+    try_gently:
+        risky_operation()
+    catch_and_comfort error:
+        say "😊 遇到了小问题，不要担心"
+        say "错误信息：" + error.message
+        suggest "让我们一起解决这个问题"
+
+        // 提供恢复建议
+        offer_solution:
+            say "💡 可以尝试以下方法："
+            say "1. 检查输入数据"
+            say "2. 确认网络连接"
+            say "3. 重新尝试操作"
+        end
+    finally_with_grace:
+        say "🌟 无论结果如何，你都做得很好"
+    end
+end
+
+// === 数据结构 - 优雅的集合操作 ===
+gentle_function work_with_collections():
+    // 创建一个温柔的列表
+    gentle_list fruits = ["🍎 苹果", "🍌 香蕉", "🍓 草莓", "🥝 猕猴桃"]
+
+    // 温柔地遍历
+    gently_for each fruit in fruits:
+        say "品尝美味的 " + fruit
+    end
+
+    // 温柔地筛选
+    sweet_fruits = fruits.filter_gently(fruit -> fruit.contains("甜"))
+
+    // 温柔地映射转换
+    uppercase_fruits = fruits.transform_kindly(fruit -> fruit.to_upper())
+
+    say "🍽️ 享受这些美味的水果吧！"
+end
+
+// === 类型定义 - 温柔的数据建模 ===
+gentle_type Person:
+    name: String
+    age: Number
+    interests: List<String>
+
+    gentle_method introduce_yourself():
+        say "🌸 大家好，我是 " + self.name
+        say "我喜欢 " + self.interests.join_with_love(", ")
+    end
+
+    gentle_method celebrate_birthday():
+        self.age = self.age + 1
+        say "🎂 生日快乐！现在 " + self.age + " 岁了"
+        say "🎉 愿新的一岁充满惊喜和成长"
+    end
+end
+
+// === 异步编程 - 温柔的异步操作 ===
+async gentle_function fetch_inspiration():
+    say "🔍 正在寻找灵感..."
+
+    inspiration = await_patiently fetch_from_api("https://api.inspiration.com/daily")
+
+    gently_if inspiration.success:
+        say "💡 今日灵感：" + inspiration.message
+    else:
+        say "🌈 没关系，灵感就在我们心中"
+        offer_local_inspiration()
+    end
+end
+
+// === 模式匹配 - 优雅的分支处理 ===
+gentle_function handle_response(response):
+    match_gently response:
+        case Success(data):
+            say "🎉 成功获得数据：" + data
+            celebrate_success()
+
+        case Warning(message):
+            say "⚠️ 温馨提示：" + message
+            suggest_improvement()
+
+        case Error(code, message):
+            say "💝 遇到错误 " + code + "：" + message
+            offer_help_and_support()
+
+        case _:
+            say "🤔 这是一个新情况，让我们一起探索"
+    end
+end
+
+// === 包管理和模块导入 ===
+import_with_gratitude "std/collections" as gentle_collections
+import_lovingly "ui/components" exposing (Button, TextInput, Layout)
+import_carefully "network/http" with_safety_checks
+
+// === 声明式UI示例 ===
+gentle_function create_welcoming_ui():
+    return gentle_layout:
+        header:
+            title "🌸 欢迎来到 HerLang"
+            subtitle "温柔的编程体验"
+        end
+
+        main_content:
+            card:
+                say_gently "这里是一个安全、包容的编程空间"
+
+                button "开始学习" on_click: start_learning
+                button "寻求帮助" on_click: get_support
+                button "分享想法" on_click: share_thoughts
+            end
+
+            gentle_form:
+                text_input "你的名字" placeholder: "告诉我们你的名字"
+                text_area "今天的心情" placeholder: "分享你今天的感受"
+                submit_button "温柔提交" style: "gentle-primary"
+            end
+        end
+
+        footer:
+            say "💖 记住：每个人都值得被温柔以待"
+        end
+    end
+end
+
+// === 测试框架 - 温柔的测试 ===
+gentle_test "检查问候功能":
+    given:
+        name = "小明"
+    when:
+        result = greet_with_love(name)
+    then:
+        expect_kindly result contains "小明"
+        expect_gently result contains "💖"
+    end
+
+    say "✅ 测试通过，功能运行良好"
+end
+
+// === 主程序入口 ===
+start_with_intention:
+    say "🌅 新的一天开始了"
+
+    // 并发执行多个任务
+    collaborate:
+        greet_with_love("世界")
+        check_mood("happy")
+        count_blessings()
+        collaborative_work()
+    end
+
+    // 创建用户界面
+    ui = create_welcoming_ui()
+    ui.show_with_love()
+
+    // 异步获取灵感
+    spawn_async fetch_inspiration()
+
+    say "🌟 愿你的编程之旅充满喜悦和成长"
+end
+
+// === 配置和元数据 ===
+project_metadata:
+    version: "1.0.0"
+    description: "展示 HerLang 温柔语法的示例程序"
+    keywords: ["温柔", "包容", "现代", "友好"]
+
+    community_guidelines:
+        - "以尊重和理解对待每个人"
+        - "创造安全和包容的编程环境"
+        - "鼓励学习和成长，不论技能水平"
+        - "庆祝多样性和不同的观点"
+    end
+
+    accessibility:
+        screen_reader_friendly: true
+        high_contrast_mode: true
+        keyboard_navigation: true
+        multilingual_support: ["中文", "English", "Español", "Français"]
+    end
+end
